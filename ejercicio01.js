@@ -70,9 +70,5 @@ function int (){
 }
 
 function delta (){
-    
-    Cubo[0].position.set(0, 18, 0);
-    Cubo[1].position.set(18, 0, 0);
-    Cubo[2].position.set(0, 0, 18);
-
+transLate  ([50,0,0]); //<Encontre esto pero al tener el error de arriba no se si me funciona de manera correcta> 
 }
