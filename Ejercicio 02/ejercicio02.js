@@ -58,17 +58,20 @@ function init() {
     renderer.render(scene, camera);
 }
 
-function int (){
-
-    for (var i = 0; i < 5; i++) {
-
-        var dim - 2 +(4*i); // <En esta linea la opracion para hacer los cubos superpuestos no me funciona y me sale un error donde me dice que falta una coma ",">
-        Cubo.push(cubo(4, 4, 4, 0xFF0000, 'Physical', false)); 
-        Cubo [y].position.set(0,x,0);
-        Cubo [y].position
-}
-}
-
-function delta (){
+function transLate (obj, deltaX, deltaY, deltaZ){
+    obj.position   //<me hace falta terminar el parametro dado, ya que el que use esta mal elaborado>
 transLate  ([50,0,0]); //<Encontre esto pero al tener el error de arriba no se si me funciona de manera correcta> 
 }
+    Cubo=[dim];
+    Cubo.push(cubo(dim, dim, dim, 0xFF0000, 'Physical', false));
+    Cubo.push(cubo(dim, dim, dim, 0x00FFFF, 'Standard', false));
+    Cubo.push(cubo(dim, dim, dim, 0xFFFFFF, 'Lambert', false));
+
+function rotateObject(object, degreeX=0, degreeY=0, degreeZ=0){
+
+    object.rotateX(THREE.Math.degToRad(degreeX));
+    object.rotateY(THREE.Math.degToRad(degreeY));
+    object.rotateZ(THREE.Math.degToRad(degreeZ));
+}
+
+rotateObject(Cubo, 90,90,90 );
